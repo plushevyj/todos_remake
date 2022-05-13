@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Task {
   int id;
   String text;
@@ -10,10 +8,8 @@ class Task {
 
   late Duration diffTime = endTime.difference(startTime);
 
-  @override
-  String toString() {
-    return
-    '''{
+  String toJson() {
+    return '''{
       "id": "$id",
       "text": "$text",
       "startTime": "$startTime",
